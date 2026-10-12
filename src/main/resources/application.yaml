@@ -1,0 +1,15 @@
+server:
+  port: 9966
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    
+spring:
+  security:
+    user: 
+      password: root
+      name: root
+      roles: # multiple roles
+       - admin
+       - user
