@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <style>
+    body {
+      background: #eef2f3;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    .profile-container {
+      background: #fff;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+    }
+    .username {
+      font-weight: bold;
+      color: #007bff;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #c82333;
+    }
+  </style>
+</head>
+<body>
+<div class="profile-container">
+  <h2>Xin chào, <span class="username" th:text="${username}"></span></h2>
+  <p>Chào mừng bạn đến trang cá nhân!</p>
+  <form th:action="@{/logout}" method="post">
+    <button type="submit">Đăng xuất</button>
+  </form>
+
+  <a th:href="@{/logout}">Log Out</a>
+</div>
+</body>
+</html>
